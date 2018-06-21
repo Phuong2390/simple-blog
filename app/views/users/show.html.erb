@@ -1,0 +1,32 @@
+<h1>User#Show</h1>
+    <p>
+        ID: <%= @user.id %>
+    </p>
+    <p>
+        Email: <%= @user.email %>
+    </p>
+    <p>
+        Username: <%= @user.username %>
+    </p>
+    <p>
+        Password: <%= @user.passwordigest %>
+    </p>
+    <p>
+        Role: <%= @user.role %>
+    </p>
+    <hr>
+    <%= link_to 'Back', users_path %> &nbsp;&nbsp;&nbsp;
+    <%= link_to "Edit", edit_user_path(@user) %> &nbsp;&nbsp;&nbsp;
+    <%= link_to "Delete", user_path(@user),
+                            method: :delete,
+                            data: {confirm: 'Are you sure?'} %>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-offset-3 col-lg-6">
+      <div class="text-left">
+        <label><%= @user.username %></label>
+      </div>
+      <%= link_to "Logout", logout_path, method: :delete %> 
+    </div>
+  </div>
+</div>
